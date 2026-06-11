@@ -101,4 +101,83 @@ footer {
   padding: 10px;
   font-size: 0.8em;
   margin-top: 20px;
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  list-style: none;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 500px;
+}
+input,
+textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: border-color 0.3s ease;
+}
+   input:focus,
+textarea:focus {
+  border-color: #4a90e2;
+  outline: none;
+}
+button[type="submit"] {
+  padding: 10px;
+  border: none;
+  background-color: #4a90e2;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #357abd;
+}
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+   @media (max-width: 600px) {
+  main {
+    flex-direction: column;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  .contact-form {
+    width: 100%;
+  }
+}
+   @media (min-width: 601px) and (max-width: 1024px) {
+  main {
+    flex-direction: column;
+  }
+
+  .contact-form {
+    max-width: 600px;
+  }
+}
+   @media (min-width: 1025px) {
+  main {
+    flex-direction: row;
+  }
+
+  .contact-form {
+    max-width: 500px;
+  }
 }
